@@ -9,7 +9,7 @@ Built with:
 - Postgres with PGVector for the Vector Database
 - Neo4j for the Knowledge Graph Engine (Graphiti connects to this)
 - FastAPI for the Agent API
-- Claude Code for the AI Coding Assistant (See `CLAUDE.md`, `PLANNING.md`, and `TASK.md`)
+- Claude Code for the AI Coding Assistant ( `CLAUDE.md`, `PLANNING.md`, and `TASK.md`)
 
 ## Overview
 
@@ -48,20 +48,13 @@ pip install -r requirements.txt
 
 Execute the SQL in `sql/schema.sql` to create all necessary tables, indexes, and functions.
 
-Be sure to change the embedding dimensions on lines 31, 67, and 100 based on your embedding model. OpenAI's text-embedding-3-small is 1536 and nomic-embed-text from Ollama is 768 dimensions, for reference.
-
 Note that this script will drop all tables before creating/recreating!
 
 ### 4. Set up Neo4j
 
 You have a couple easy options for setting up Neo4j:
 
-#### Option A: Using Local-AI-Packaged (Simplified setup - Recommended)
-1. Clone the repository: `git clone https://github.com/coleam00/local-ai-packaged`
-2. Follow the installation instructions to set up Neo4j through the package
-3. Note the username and password you set in .env and the URI will be bolt://localhost:7687
-
-#### Option B: Using Neo4j Desktop
+#### Using Neo4j Desktop
 1. Download and install [Neo4j Desktop](https://neo4j.com/download/)
 2. Create a new project and add a local DBMS
 3. Start the DBMS and set a password
