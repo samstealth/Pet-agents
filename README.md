@@ -54,7 +54,7 @@ Note that this script will drop all tables before creating/recreating!
 
 You have a couple easy options for setting up Neo4j:
 
-#### Using Neo4j Desktop
+#### Option B: Using Neo4j Desktop
 1. Download and install [Neo4j Desktop](https://neo4j.com/download/)
 2. Create a new project and add a local DBMS
 3. Start the DBMS and set a password
@@ -295,46 +295,6 @@ The system excels at queries that benefit from both semantic search and relation
 - **Complex Analysis**: "Compare the AI strategies of FAANG companies"
   - Combines vector search for strategy documents with graph traversal for competitive analysis
 
-### Why This Architecture Works So Well
-
-1. **Complementary Strengths**: Vector search finds semantically similar content while knowledge graphs reveal hidden connections
-
-2. **Temporal Intelligence**: Graphiti tracks how facts change over time, perfect for the rapidly evolving AI landscape
-
-3. **Flexible LLM Support**: Switch between OpenAI, Ollama, OpenRouter, or Gemini based on your needs
-
-4. **Production Ready**: Comprehensive testing, error handling, and monitoring
-
-## API Documentation
-
-Visit http://localhost:8058/docs for interactive API documentation once the server is running.
-
-## Key Features
-
-- **Hybrid Search**: Seamlessly combines vector similarity and graph traversal
-- **Temporal Knowledge**: Tracks how information changes over time
-- **Streaming Responses**: Real-time AI responses with Server-Sent Events
-- **Flexible Providers**: Support for multiple LLM and embedding providers
-- **Semantic Chunking**: Intelligent document splitting using LLM analysis
-- **Production Ready**: Comprehensive testing, logging, and error handling
-
-## Project Structure
-
-```
-agentic-rag-knowledge-graph/
-├── agent/                  # AI agent and API
-│   ├── agent.py           # Main Pydantic AI agent
-│   ├── api.py             # FastAPI application
-│   ├── providers.py       # LLM provider abstraction
-│   └── models.py          # Data models
-├── ingestion/             # Document processing
-│   ├── ingest.py         # Main ingestion pipeline
-│   ├── chunker.py        # Semantic chunking
-│   └── embedder.py       # Embedding generation
-├── sql/                   # Database schema
-├── documents/             # Your markdown files
-└── tests/                # Comprehensive test suite
-```
 
 ## Running Tests
 
@@ -374,5 +334,3 @@ python -m ingestion.ingest --verbose
 **LLM API Issues**: Check your API key and provider configuration in `.env`
 
 ---
-
-Built with ❤️ using Pydantic AI, FastAPI, PostgreSQL, and Neo4j.
