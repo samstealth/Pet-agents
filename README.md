@@ -9,7 +9,7 @@ Built with:
 - Postgres with PGVector for the Vector Database
 - Neo4j for the Knowledge Graph Engine (Graphiti connects to this)
 - FastAPI for the Agent API
-- Claude Code for the AI Coding Assistant ( `CLAUDE.md`, `PLANNING.md`, and `TASK.md`)
+- Code planning for cursor/windsurf/claude code ( `CLAUDE.md`, `PLANNING.md`, and `TASK.md`)
 
 ## Overview
 
